@@ -69,7 +69,7 @@
 <header>
   <h1>Privacy Policy</h1>
   <p class="lead">Wheel Life — telemetry, ride tracking, and community for electric&nbsp;unicycle riders.</p>
-  <p class="meta">Effective date: July 21, 2026 · Last updated: July 21, 2026</p>
+  <p class="meta">Effective date: July 21, 2026 · Last updated: August 20, 2026</p>
 </header>
 
 <p>This policy explains what information the Wheel Life app (“the app”, “we”, “us”) collects, why, how it is used, and the choices you have. It is written to match how the app actually behaves. Wheel Life is built around a simple principle: your riding data is yours, and it stays on your device unless you choose to share it.</p>
@@ -80,12 +80,12 @@
 </div>
 
 <h2>1. Who this policy covers</h2>
-<p>This policy applies to the Wheel Life iOS app and its backend service. The app is provided by Airik Strandberg, located in California, USA. If you have questions, contact us at <a href="mailto:wheellifeapp@gmail.com">wheellifeapp@gmail.com</a>.</p>
+<p>This policy applies to the Wheel Life apps for iOS and Android, and to their shared backend service. The app is provided by Airik Strandberg, located in California, USA. If you have questions, contact us at <a href="mailto:wheellifeapp@gmail.com">wheellifeapp@gmail.com</a>.</p>
 
 <h2>2. Information we collect, and why</h2>
 
 <h3>Stored only on your device</h3>
-<p>When you record a ride, the app saves the route, speed, distance, elevation, airtime, and per-second sensor telemetry from your wheel (voltage, current, temperature, battery, and similar) locally on your phone using Apple’s on-device storage. This data is not transmitted to us. It powers your History, statistics, and exports, and remains on your device until you delete it or uninstall the app.</p>
+<p>When you record a ride, the app saves the route, speed, distance, elevation, airtime, and per-second sensor telemetry from your wheel (voltage, current, temperature, battery, and similar) locally on your phone, in the platform's own on-device storage. This data is not transmitted to us. It powers your History, statistics, and exports, and remains on your device until you delete it or uninstall the app.</p>
 
 <h3>Community account (optional)</h3>
 <p>The community features are optional. Everything on the wheel side — connecting, live dashboard, alarms, ride recording, History, and exports — works without an account. If you choose to sign in, we collect and store, through our backend provider:</p>
@@ -103,7 +103,7 @@
   <li><strong>Territory.</strong> The club territory feature stores only coarse map-cell identifiers and distance — never your actual path.</li>
 </ul>
 
-<h3>Anonymous wheel diagnostics (on by default, can be turned off)</h3>
+<h3>Anonymous wheel diagnostics (on by default on iOS, off by default on Android; can be changed either way)</h3>
 <p>To improve and correct support for the many wheel models on the market, the app may send a small, anonymous sample of wheel telemetry — speed, voltage, temperature, and raw Bluetooth packets, along with the wheel model — at most once per wheel per day. This sample contains no location and no information identifying you or your account. You can turn it off at any time in <code>Settings → Data &amp; Diagnostics → Share anonymous wheel data</code>.</p>
 
 <h3>Crash and performance diagnostics</h3>
@@ -116,7 +116,7 @@
 <p>The app uses Bluetooth solely to connect to your electric unicycle and read its telemetry. Bluetooth is not used to track your location or to identify nearby devices for advertising.</p>
 
 <h3>Push notifications</h3>
-<p>If you enable notifications, Apple provides us a push token for your device so we can deliver community notifications (friend requests, messages, group-ride and club activity). You can disable notifications in iOS Settings at any time.</p>
+<p>If you enable notifications, your platform’s push service — Apple’s APNs on iOS, Google’s Firebase Cloud Messaging on Android — provides us a push token for your device so we can deliver community notifications (friend requests, messages, group-ride and club activity). The token identifies the device, not you, and carries no ride data. You can disable notifications in your device settings at any time.</p>
 
 <h2>3. How we use your information</h2>
 <ul>
@@ -133,7 +133,8 @@
 <p><strong>With service providers.</strong> We use trusted providers to run the app:</p>
 <ul>
   <li><strong>Supabase</strong> — hosts our backend database, authentication, and storage for community data.</li>
-  <li><strong>Apple</strong> — provides push notification delivery (APNs) and maps.</li>
+  <li><strong>Apple</strong> — on iOS, provides push notification delivery (APNs) and maps.</li>
+<li><strong>Google</strong> — on Android, provides push notification delivery (Firebase Cloud Messaging) and maps (Google Maps), and distributes the app through Google Play.</li>
   <li><strong>Strava</strong> — only if you choose to connect it. When you post a ride to Strava, that ride’s data is sent to Strava under <a href="https://www.strava.com/legal/privacy">Strava’s privacy policy</a>. You can disconnect Strava at any time in Settings.</li>
 </ul>
 <p><strong>We do not sell your personal data</strong>, and we do not share it with third parties for their own marketing.</p>
