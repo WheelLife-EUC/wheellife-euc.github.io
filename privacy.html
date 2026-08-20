@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wheel Life — Privacy Policy</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --surface: #f6f7f9;
+    --text: #16181d;
+    --muted: #5b616e;
+    --border: #e4e7ec;
+    --accent: #1573b8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0f15;
+      --surface: #151b24;
+      --text: #e8ebf0;
+      --muted: #9aa3b2;
+      --border: #2b3542;
+      --accent: #5cc4ff;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 40px 22px 80px; }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 28px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; letter-spacing: -0.02em; }
+  h2 {
+    font-size: 20px; margin: 40px 0 10px; letter-spacing: -0.01em;
+    padding-top: 8px;
+  }
+  h3 { font-size: 16px; margin: 22px 0 4px; }
+  p, li { color: var(--text); }
+  .muted { color: var(--muted); }
+  .lead { font-size: 18px; color: var(--muted); margin: 0; }
+  .meta { color: var(--muted); font-size: 14px; margin: 10px 0 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  .callout {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin: 18px 0;
+    font-size: 15.5px;
+  }
+  .callout strong { display: block; margin-bottom: 4px; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; }
+  .fill { color: #b23b3b; font-weight: 600; }
+  @media (prefers-color-scheme: dark) { .fill { color: #ff8f8f; } }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Privacy Policy</h1>
+  <p class="lead">Wheel Life — telemetry, ride tracking, and community for electric&nbsp;unicycle riders.</p>
+  <p class="meta">Effective date: July 21, 2026 · Last updated: July 21, 2026</p>
+</header>
+
+<p>This policy explains what information the Wheel Life app (“the app”, “we”, “us”) collects, why, how it is used, and the choices you have. It is written to match how the app actually behaves. Wheel Life is built around a simple principle: your riding data is yours, and it stays on your device unless you choose to share it.</p>
+
+<div class="callout">
+  <strong>The short version</strong>
+  Your rides are recorded and stored on your phone. Nothing leaves your device unless you turn on a sharing feature. Leaderboards sync numbers only — never your location. Shared routes are trimmed to hide where you start and stop. Anonymous wheel diagnostics can be turned off. We never sell your data.
+</div>
+
+<h2>1. Who this policy covers</h2>
+<p>This policy applies to the Wheel Life iOS app and its backend service. The app is provided by Airik Strandberg, located in California, USA. If you have questions, contact us at <a href="mailto:wheellifeapp@gmail.com">wheellifeapp@gmail.com</a>.</p>
+
+<h2>2. Information we collect, and why</h2>
+
+<h3>Stored only on your device</h3>
+<p>When you record a ride, the app saves the route, speed, distance, elevation, airtime, and per-second sensor telemetry from your wheel (voltage, current, temperature, battery, and similar) locally on your phone using Apple’s on-device storage. This data is not transmitted to us. It powers your History, statistics, and exports, and remains on your device until you delete it or uninstall the app.</p>
+
+<h3>Community account (optional)</h3>
+<p>The community features are optional. Everything on the wheel side — connecting, live dashboard, alarms, ride recording, History, and exports — works without an account. If you choose to sign in, we collect and store, through our backend provider:</p>
+<ul>
+  <li>Your email address (for sign-in and authentication).</li>
+  <li>Your display name and, if you add one, a profile photo/avatar.</li>
+  <li>Your friends, direct messages, group rides, and clubs, so those features work.</li>
+  <li>Your chosen app color, so your name appears in it to other riders.</li>
+</ul>
+
+<h3>Ride data you choose to share</h3>
+<ul>
+  <li><strong>Leaderboard statistics.</strong> If leaderboard syncing is enabled, only the numeric results of a ride — distance, top speed, airtime, duration — are synced. Your route and location are <em>not</em> included, and shared rides do not appear in the feed from this.</li>
+  <li><strong>Shared rides.</strong> When you post a ride (manually or via auto-upload), its route is included but is trimmed at both the start and end to hide where you began and finished. Rides too short to trim safely are shared as statistics only, with no route at all.</li>
+  <li><strong>Territory.</strong> The club territory feature stores only coarse map-cell identifiers and distance — never your actual path.</li>
+</ul>
+
+<h3>Anonymous wheel diagnostics (on by default, can be turned off)</h3>
+<p>To improve and correct support for the many wheel models on the market, the app may send a small, anonymous sample of wheel telemetry — speed, voltage, temperature, and raw Bluetooth packets, along with the wheel model — at most once per wheel per day. This sample contains no location and no information identifying you or your account. You can turn it off at any time in <code>Settings → Data &amp; Diagnostics → Share anonymous wheel data</code>.</p>
+
+<h3>Crash and performance diagnostics</h3>
+<p>The app may collect anonymous crash and performance reports (via Apple’s MetricKit) to find and fix stability problems. These contain diagnostic information such as stack traces and resource usage, not your personal data.</p>
+
+<h3>Location</h3>
+<p>With your permission, the app uses your device location to record your ride’s route and to power community features such as showing nearby riders (approximate) and territory. Your precise route is stored on your device; it is only shared when you choose to post a ride, and always with the privacy trim described above.</p>
+
+<h3>Bluetooth</h3>
+<p>The app uses Bluetooth solely to connect to your electric unicycle and read its telemetry. Bluetooth is not used to track your location or to identify nearby devices for advertising.</p>
+
+<h3>Push notifications</h3>
+<p>If you enable notifications, Apple provides us a push token for your device so we can deliver community notifications (friend requests, messages, group-ride and club activity). You can disable notifications in iOS Settings at any time.</p>
+
+<h2>3. How we use your information</h2>
+<ul>
+  <li>To provide core features: recording rides, showing telemetry, and sounding alarms.</li>
+  <li>To operate the community: accounts, feed, leaderboards, friends, messages, group rides, clubs, and territory.</li>
+  <li>To deliver notifications you’ve opted into.</li>
+  <li>To improve wheel support and fix bugs, using anonymous diagnostics.</li>
+  <li>To keep the service secure and prevent abuse.</li>
+</ul>
+<p>We do not use your data for advertising, and we do not build advertising profiles.</p>
+
+<h2>4. How your information is shared</h2>
+<p><strong>With other riders.</strong> If you use the community, other riders can see the information you choose to make visible — your display name, avatar, shared rides, leaderboard results, club membership, and messages you send them.</p>
+<p><strong>With service providers.</strong> We use trusted providers to run the app:</p>
+<ul>
+  <li><strong>Supabase</strong> — hosts our backend database, authentication, and storage for community data.</li>
+  <li><strong>Apple</strong> — provides push notification delivery (APNs) and maps.</li>
+  <li><strong>Strava</strong> — only if you choose to connect it. When you post a ride to Strava, that ride’s data is sent to Strava under <a href="https://www.strava.com/legal/privacy">Strava’s privacy policy</a>. You can disconnect Strava at any time in Settings.</li>
+</ul>
+<p><strong>We do not sell your personal data</strong>, and we do not share it with third parties for their own marketing.</p>
+<p>We may disclose information if required by law, or to protect the rights, safety, and security of our users and service.</p>
+
+<h2>5. Your choices and controls</h2>
+<ul>
+  <li>Use the app without an account — all wheel features work offline.</li>
+  <li>Turn leaderboard syncing on or off in <code>Settings → Sharing &amp; Privacy</code>.</li>
+  <li>Turn ride auto-upload on or off, and set the privacy-trim distance.</li>
+  <li>Turn off anonymous wheel data in <code>Settings → Data &amp; Diagnostics</code>.</li>
+  <li>Control location and notification permissions in iOS Settings.</li>
+  <li>Delete individual rides in the app; deleted rides go to Recently Deleted before being removed.</li>
+  <li>Delete your community account and its data yourself, at any time, in <code>Community → Profile → Delete Account</code>. This permanently removes your profile, shared rides, and group rides; rides stored on your device are unaffected. If you would rather we did it, contact us at <a href="mailto:wheellifeapp@gmail.com">wheellifeapp@gmail.com</a>.</li>
+</ul>
+
+<h2>6. Data retention</h2>
+<p>On-device ride data is kept until you delete it or uninstall the app. Community data is kept while your account is active. If you delete your account, we remove your personal community data within a reasonable period, except where we must retain limited information to comply with law or resolve disputes. Anonymous diagnostics, which are not linked to you, may be retained to improve the app.</p>
+
+<h2>7. Data security</h2>
+<p>Community data is transmitted over encrypted connections (HTTPS/TLS) and access is protected by authentication and server-side access rules. No method of transmission or storage is perfectly secure, but we take reasonable measures to protect your information.</p>
+
+<h2>8. Children</h2>
+<p>Wheel Life is not directed to children under 13 (or the minimum age required in your country), and we do not knowingly collect personal information from them. If you believe a child has provided us information, contact us and we will delete it.</p>
+
+<h2>9. International users</h2>
+<p>Your information may be processed and stored on servers located in the United States. By using the app you consent to this processing. Depending on where you live, you may have rights to access, correct, or delete your personal data, and to object to or restrict certain processing — contact us to exercise them.</p>
+
+<h2>10. Changes to this policy</h2>
+<p>We may update this policy from time to time. When we make material changes, we will update the “Last updated” date above and, where appropriate, notify you in the app. Continued use of the app after an update means you accept the revised policy.</p>
+
+<h2>11. Contact us</h2>
+<p>Questions about this policy or your data? Reach us at <a href="mailto:wheellifeapp@gmail.com">wheellifeapp@gmail.com</a>.</p>
+
+<footer>
+  © 2026 Airik Strandberg. Wheel Life is not affiliated with any wheel manufacturer. Ride within your limits and wear protective gear.
+</footer>
+</div>
+</body>
+</html>

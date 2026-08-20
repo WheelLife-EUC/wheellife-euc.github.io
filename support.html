@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wheel Life — Support</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --surface: #f6f7f9;
+    --text: #16181d;
+    --muted: #5b616e;
+    --border: #e4e7ec;
+    --accent: #1573b8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0f15;
+      --surface: #151b24;
+      --text: #e8ebf0;
+      --muted: #9aa3b2;
+      --border: #2b3542;
+      --accent: #5cc4ff;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 40px 22px 80px; }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 28px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; letter-spacing: -0.02em; }
+  h2 { font-size: 20px; margin: 40px 0 10px; letter-spacing: -0.01em; padding-top: 8px; }
+  h3 { font-size: 16px; margin: 22px 0 4px; }
+  p, li { color: var(--text); }
+  .muted { color: var(--muted); }
+  .lead { font-size: 18px; color: var(--muted); margin: 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  .callout {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin: 18px 0;
+    font-size: 15.5px;
+  }
+  .callout strong { display: block; margin-bottom: 4px; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; }
+  .fill { color: #b23b3b; font-weight: 600; }
+  @media (prefers-color-scheme: dark) { .fill { color: #ff8f8f; } }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Support</h1>
+  <p class="lead">Wheel Life — telemetry, ride tracking, and community for electric&nbsp;unicycle riders.</p>
+</header>
+
+<div class="callout">
+  <strong>Get in touch</strong>
+  Email <a href="mailto:wheellifeapp@gmail.com">wheellifeapp@gmail.com</a>. We read everything and aim to reply within a couple of days. Reports of abusive behaviour or objectionable content are handled first — typically within 24 hours.
+</div>
+
+<p>When you write in about a bug, these details get to an answer much faster: your <strong>wheel brand and model</strong>, your <strong>iOS version</strong>, the <strong>app version</strong> (Settings → About), and what you expected to happen versus what did.</p>
+
+<h2>Common questions</h2>
+
+<h3>My wheel won’t connect</h3>
+<p>Make sure the wheel is powered on and is not already connected to another app or phone — these wheels accept only one Bluetooth connection at a time. Force-quit any other EUC app, then pull to refresh in the device picker. If the wheel appears but shows no data, it may be a model whose protocol we haven’t confirmed yet; email us and we’ll take a look.</p>
+
+<h3>My ride says “Recording…” or hasn’t synced</h3>
+<p>A ride uploads once it has finished. If your wheel disconnected and the ride never stopped on its own, force-quit the app and reopen it — the ride is recovered and uploads immediately.</p>
+
+<h3>Some values look wrong for my wheel</h3>
+<p>Wheel manufacturers don’t publish their Bluetooth protocols, so support for each model is worked out from real captures. A few models are still unconfirmed. If a number looks wrong, email us your wheel model and what it should read — and leave <code>Settings → Data &amp; Diagnostics → Share anonymous wheel data</code> on, which sends the anonymous sample that lets us fix it.</p>
+
+<h3>How do I report or block another rider?</h3>
+<p>Tap the “…” menu on any rider, shared ride, or group ride, or open their profile — both offer <strong>Report</strong> and <strong>Block</strong>. Blocking is immediate and mutual. You can also report someone to us directly by email.</p>
+
+<h3>How do I delete my account?</h3>
+<p>In the app: <code>Community → Profile → Delete Account</code>. This permanently removes your profile, shared rides, and group rides. Rides stored on your phone stay on your phone.</p>
+
+<h3>Do I need an account?</h3>
+<p>No. Connecting to your wheel, the live dashboard, alarms, ride recording, History, and exports all work without one. An account is only needed for the community.</p>
+
+<h2>Safety</h2>
+<p>Wheel Life shows you what your wheel reports — it does not control your wheel and cannot make riding safe. Telemetry can be wrong, delayed, or missing, and alarms can fail. Ride within your limits, wear protective gear, and never rely on the app to decide whether it’s safe to ride.</p>
+
+<h2>Legal</h2>
+<p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
+
+<footer>
+  © 2026 Airik Strandberg. Wheel Life is not affiliated with any wheel manufacturer. Ride within your limits and wear protective gear.
+</footer>
+</div>
+</body>
+</html>
