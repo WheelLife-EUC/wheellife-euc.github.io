@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--
+  The site root. It exists because Supabase redirects here after confirming an email address
+  (the project's Site URL is this origin), and until 2026-09-21 there was no index.html, so every
+  rider who followed the link in their confirmation email landed on a GitHub 404. A rider testing
+  the Android signup reported it (wheeldash#741).
+
+  It does two jobs. Arriving from a confirmation link, it says the address is confirmed and sends
+  the rider back to the app. Arriving any other way, it is a plain landing page for the four pages
+  this site actually serves.
+
+  Supabase appends its result to the URL fragment (#access_token=…&type=signup) on success and
+  ?error=…&error_description=… on failure, so the page can tell the three cases apart instead of
+  guessing. It never claims success it cannot see.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WheelLife</title>
+<style>
+  :root {
+    --bg: #0b0d10;
+    --surface: #14181d;
+    --ink: #f2f5f7;
+    --ink-dim: #9aa4ad;
+    --accent: #c6f24e;
+    --warning: #ff5f4d;
+    --hairline: #232a31;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 24px 16px 48px;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+  main { width: 100%; max-width: 34rem; }
+  h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.02em;
+    margin: 0 0 0.35em;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .card.good { border-color: var(--accent); }
+  .card.bad { border-color: var(--warning); }
+  .tag {
+    font: 600 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 10px;
+  }
+  .card.bad .tag { color: var(--warning); }
+  p { margin: 0 0 0.8em; }
+  p:last-child { margin-bottom: 0; }
+  .dim { color: var(--ink-dim); }
+  nav a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--hairline);
+    display: block;
+    padding: 13px 2px;
+  }
+  nav a:last-child { border-bottom: 0; }
+  nav a:hover { color: var(--accent); }
+  footer { color: var(--ink-dim); font-size: 0.85rem; margin-top: 28px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>WheelLife</h1>
+  <p class="dim">Telemetry for electric unicycles.</p>
+
+  <div id="result"></div>
+
+  <nav class="card">
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy policy</a>
+    <a href="terms.html">Terms of use</a>
+    <a href="delete-account.html">Delete your account</a>
+  </nav>
+
+  <footer>Powered by Strava for riders who connect it.</footer>
+</main>
+
+<script>
+  // Supabase puts the outcome of /auth/v1/verify in the fragment on success and the query on
+  // failure. Read both, claim nothing that is not there.
+  (function () {
+    var hash = new URLSearchParams(window.location.hash.replace(/^#/, ""));
+    var query = new URLSearchParams(window.location.search);
+    var error = query.get("error_description") || query.get("error") ||
+                hash.get("error_description") || hash.get("error");
+    var confirmed = hash.get("access_token") || hash.get("refresh_token") ||
+                    query.get("type") === "signup";
+    var slot = document.getElementById("result");
+    if (!error && !confirmed) return;   // an ordinary visit says nothing extra
+
+    var card = document.createElement("div");
+    card.className = "card " + (error ? "bad" : "good");
+    var tag = document.createElement("span");
+    tag.className = "tag";
+    var body = document.createElement("p");
+
+    if (error) {
+      tag.textContent = "THAT LINK DID NOT WORK";
+      // The commonest cause by far: the emailed code and link both expire after an hour.
+      body.textContent = "Your confirmation link has expired or has already been used. " +
+        "Open WheelLife, enter your email again, and it will send you a fresh code.";
+    } else {
+      tag.textContent = "EMAIL CONFIRMED";
+      body.textContent = "Your email address is confirmed. Go back to WheelLife and sign in — " +
+        "you can close this page.";
+    }
+    card.appendChild(tag);
+    card.appendChild(body);
+    slot.appendChild(card);
+  })();
+</script>
+</body>
+</html>
