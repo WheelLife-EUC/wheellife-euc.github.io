@@ -111,7 +111,7 @@ confirm, normally within a few days.</p>
   <li>Any Strava connection, along with the link between the two accounts. If you signed in with Apple, we also ask Apple to revoke that sign-in.</li>
 </ul>
 
-<p><strong>A known gap.</strong> The database rows above are removed immediately, but a file one of those rows pointed to — an avatar image, a shared ride's route file, a ride photo — is not yet deleted by this today. We are fixing that; until we do, such a file may remain reachable at its own address even though the row that used to reference it is gone.</p>
+<p>The database rows above are removed immediately. The files those rows pointed to — your avatar, profile cover, route files, ride photos, raw wheel captures, and report screenshots — are removed from cloud storage shortly after deletion, with automatic retries. If you founded a club and it is removed along with your account (see below), its photos are removed the same way.</p>
 
 <p>This is not reversible. We cannot restore a deleted account or its rides.</p>
 
@@ -122,9 +122,9 @@ confirm, normally within a few days.</p>
   rows on our servers; the local ride history that powers History, statistics and exports is untouched.
   Uninstalling the app removes that.</li>
 
-  <li><strong>A club you founded</strong> stays with the riders who are still in it. We aim for it to
-  no longer show as founded by you, the same way we handle any other membership; if you founded a
-  club, contact us to confirm this went as expected for your account.</li>
+  <li><strong>A club you founded</strong> passes to another rider: its longest-standing admin, or,
+  if it has no admin, its longest-standing member. If you were the club's last member, the club is
+  removed along with your account.</li>
 
   <li><strong>Messages you sent to another rider are deleted, not kept.</strong> Unlike an email,
   a direct message is one record shared by both of you — deleting your account deletes it for
