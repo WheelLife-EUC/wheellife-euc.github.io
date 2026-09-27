@@ -95,38 +95,40 @@ confirm, normally within a few days.</p>
 
 <h2>What is deleted</h2>
 
-<p>Deleting your account permanently removes, from our servers:</p>
+<p>Deleting your account immediately and permanently removes, from our database:</p>
 
 <ul>
   <li>Your account and sign-in credentials.</li>
   <li>Your rider profile — display name, city, avatar, and your wheels.</li>
-  <li>Every ride you have shared, including its route file where one was uploaded.</li>
+  <li>Every ride you have shared — the database row for each one, including any route it carried.</li>
   <li>Your leaderboard entries, badges, achievements, and kudos.</li>
-  <li>Your territory claims and club memberships.</li>
+  <li>Your territory claims.</li>
+  <li>Your club memberships (see below for a club you founded).</li>
   <li>Group rides you created, and your attendance of any others.</li>
   <li>Your direct messages, club messages, group-ride messages, and comments.</li>
+  <li>Your wheel-diagnostic samples and other diagnostic notes tied to your account.</li>
   <li>Your notification settings and push token.</li>
-  <li>Any Strava connection, along with the link between the two accounts.</li>
+  <li>Any Strava connection, along with the link between the two accounts. If you signed in with Apple, we also ask Apple to revoke that sign-in.</li>
 </ul>
+
+<p>The database rows above are removed immediately. The files those rows pointed to — your avatar, profile cover, route files, ride photos, raw wheel captures, and report screenshots — are removed from cloud storage shortly after deletion, with automatic retries. If you founded a club and it is removed along with your account (see below), its photos are removed the same way.</p>
 
 <p>This is not reversible. We cannot restore a deleted account or its rides.</p>
 
 <h2>What is kept, and for how long</h2>
 
 <ul>
-  <li><strong>Rides on your phone stay on your phone.</strong> Deleting your account removes what is
-  on our servers; the local ride history that powers History, statistics and exports is untouched.
+  <li><strong>Rides on your phone stay on your phone.</strong> Deleting your account removes the database
+  rows on our servers; the local ride history that powers History, statistics and exports is untouched.
   Uninstalling the app removes that.</li>
 
-  <li><strong>A club you founded continues to exist</strong> for the riders who are still in it, no
-  longer linked to you. Deleting your account does not delete other people's memberships.</li>
+  <li><strong>A club you founded</strong> passes to another rider: its longest-standing admin, or,
+  if it has no admin, its longest-standing member. If you were the club's last member, the club is
+  removed along with your account.</li>
 
-  <li><strong>Messages you sent to another rider</strong> remain in that rider's own copy of the
-  conversation, in the same way an email you sent stays in the recipient's inbox.</li>
-
-  <li><strong>Anonymous wheel-diagnostic samples</strong>, if you switched that setting on, are
-  de-identified and retained while they are useful for correcting wheel support. They contain no
-  location and are not linked to your profile once the account is gone.</li>
+  <li><strong>Messages you sent to another rider are deleted, not kept.</strong> Unlike an email,
+  a direct message is one record shared by both of you — deleting your account deletes it for
+  both sides, so it will also disappear from the other rider's conversation.</li>
 
   <li><strong>Backups.</strong> Deleted data can persist in routine encrypted backups for up to
   <strong>30 days</strong>, after which it is overwritten. We do not restore deleted accounts from
