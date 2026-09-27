@@ -69,14 +69,19 @@
 <header>
   <h1>Privacy Policy</h1>
   <p class="lead">Wheel Life — telemetry, ride tracking, and community for electric&nbsp;unicycle riders.</p>
-  <p class="meta">Effective date: July 21, 2026 · Last updated: September 23, 2026</p>
+  <p class="meta">Effective date: July 21, 2026 · Last updated: September 27, 2026</p>
 </header>
 
-<p>This policy explains what information the Wheel Life app (“the app”, “we”, “us”) collects, why, how it is used, and the choices you have. It is written to match how the app actually behaves. Wheel Life is built around a simple principle: your riding data is yours. Your route stays on your device unless you choose to post a ride, and the one thing an account syncs on its own is your leaderboard numbers, which you can switch off.</p>
+<div class="callout">
+  <strong>What changed on September 27, 2026</strong>
+  A rider showed us this page did not match the app, and we rewrote the affected sections rather than patch around them. In particular: a ride synced only for the leaderboard now appears as a numbers-only card in your feed and your friends' — never a route, never to a stranger; leaderboard syncing also uploads the coarse map cells (about 900&nbsp;m) a ride passed through, which is a location signal, and a rider not in a club still holds cells under their own name; wheel-diagnostic samples and push tokens are tied to your account, not anonymous; recording a ride and viewing History need an account, the same as the Community; group rides, leaderboards, public rides and public profiles can be seen by anyone on our website, with no account; and account deletion removes your database rows today, but not yet every file (an avatar, a ride's route file, a ride photo) those rows pointed to — we are fixing that and list it below as a known gap rather than a promise. See each numbered section for the exact wording.
+</div>
+
+<p>This policy explains what information the Wheel Life app (“the app”, “we”, “us”) collects, why, how it is used, and the choices you have. It is written to match how the app actually behaves. Wheel Life is built around a simple principle: your riding data is yours. Your route stays on your device unless you choose to post a ride, and the one thing an account syncs on its own is your leaderboard numbers and the coarse map cells you rode through, which you can switch off.</p>
 
 <div class="callout">
   <strong>The short version</strong>
-  Your rides are recorded and stored on your phone. If you have an account, nothing leaves your device except your leaderboard numbers, which you can switch off, and rides you choose to post. Leaderboards sync numbers only — never your location. Shared routes are trimmed to hide where you start and stop. Anonymous wheel diagnostics can be turned off. We never sell your data.
+  Your rides are recorded and stored on your phone. Recording a ride and viewing your History need a free account; connecting a wheel, its live dashboard and its alarms do not. If you have an account, leaderboard syncing sends only a ride's numbers and the coarse map cells it passed through — never your precise route — and it now shows as a card in your feed and your friends', never to a stranger. A ride you post is trimmed to hide where you start and stop. Diagnostic samples are tied to your account, not anonymous, and the wheel-data sample can be turned off. Group rides, leaderboards, and public rides and profiles can be seen on our website by anyone, with no account. We never sell your data.
 </div>
 
 <h2>1. Who this policy covers</h2>
@@ -87,8 +92,8 @@
 <h3>Stored only on your device</h3>
 <p>When you record a ride, the app saves the route, speed, distance, elevation, airtime, and per-second sensor telemetry from your wheel (voltage, current, temperature, battery, and similar) locally on your phone, in the platform's own on-device storage. This data is not transmitted to us. It powers your History, statistics, and exports, and remains on your device until you delete it or uninstall the app.</p>
 
-<h3>Community account (optional)</h3>
-<p>The community features are optional. Everything on the wheel side — connecting, live dashboard, alarms, ride recording, History, and exports — works without an account. If you choose to sign in, we collect and store, through our backend provider:</p>
+<h3>Community account</h3>
+<p>Connecting a wheel, its live dashboard, its alarms, the demo gauges, and Settings all work without an account. <strong>Recording a ride, viewing your History, and the Community each need a free account</strong> — a ride you record is not saved to your History, and cannot sync anywhere, until you create one or sign in. If you choose to sign in, we collect and store, through our backend provider:</p>
 <ul>
   <li>Your email address (for sign-in and authentication).</li>
   <li>Your display name and, if you add one, a profile photo/avatar.</li>
@@ -99,25 +104,38 @@
 
 <h3>Ride data you choose to share</h3>
 <ul>
-  <li><strong>Leaderboard statistics.</strong> If leaderboard syncing is enabled, only the numeric results of a ride — distance, top speed, airtime, duration — are synced. Your route and location are <em>not</em> included, and shared rides do not appear in the feed from this.</li>
-  <li><strong>Shared rides.</strong> When you post a ride (manually or via auto-upload), its route is included but is trimmed at both the start and end to hide where you began and finished. Rides too short to trim safely are shared as statistics only, with no route at all.</li>
-  <li><strong>Territory.</strong> The club territory feature stores only coarse map-cell identifiers and distance — never your actual path.</li>
+  <li><strong>Leaderboard statistics.</strong> If leaderboard syncing is enabled, the numeric results of a ride — distance, top speed, airtime, duration — are synced automatically, along with the coarse map cells (about 900&nbsp;m across) it passed through for Territory (see below). Your precise route is <em>not</em> included. In the app, this kind of ride is shown to you and your accepted friends as a stats card with no route — never to a stranger. Ride statistics without a route may currently be retrievable through the service's public interface by someone who already has that ride's identifier; we are closing that.</li>
+  <li><strong>Shared rides.</strong> When you post a ride (manually or via auto-upload), its route is included but is trimmed at both the start and end to hide where you began and finished. Rides too short to trim safely are shared as statistics only, with no route at all. A ride you post as "Everyone" is public: it can be seen, including its trimmed route, by any rider and by anyone visiting our website with the link, with no account needed. A ride you post as "Friends only" is visible to your accepted friends and to you.</li>
+  <li><strong>Territory.</strong> Riding through a map cell (about 900&nbsp;m across) banks distance toward it, whether or not leaderboard syncing produces anything else. Only the cell identifier and distance travel — never your actual path. If your club holds the most distance in a cell over time, the cell shows as your club's; if you are not in a club, a cell you hold shows under your own display name instead. Territory is visible to every signed-in rider, not only your club or friends.</li>
 </ul>
 
-<h3>Anonymous wheel diagnostics (on by default on iOS, off by default on Android; can be changed either way)</h3>
-<p>To improve and correct support for the many wheel models on the market, the app may send a small, anonymous sample of wheel telemetry — speed, voltage, temperature, and raw Bluetooth packets, along with the wheel model — at most once per wheel per day. This sample contains no location and no information identifying you or your account. You can turn it off at any time in <code>Settings → Data &amp; Diagnostics → Share anonymous wheel data</code>.</p>
+<h3>Wheel-diagnostic samples (on by default on iOS, off by default on Android; can be changed either way)</h3>
+<p>To improve and correct support for the many wheel models on the market, the app may send a small sample of wheel telemetry — speed, voltage, temperature, and raw Bluetooth packets, along with the wheel model — every few hours per wheel while you are signed in. This sample contains no location. It is tied to your account (so it can be matched back to your wheel if we need to ask you about it), but it is never shown to other riders and does not carry your name or email. You can turn it off at any time in <code>Settings → Data &amp; Diagnostics → Share anonymous wheel data</code>; there is no separate setting for the crash and diagnostic notes below.</p>
 
-<h3>Crash and performance diagnostics</h3>
-<p>The app may collect anonymous crash and performance reports (via Apple’s MetricKit) to find and fix stability problems. These contain diagnostic information such as stack traces and resource usage, not your personal data.</p>
+<h3>Crash and diagnostic notes</h3>
+<p>While you are signed in, the app sends us diagnostic information tied to your account: crash and performance reports (via Apple’s MetricKit, containing stack traces and resource usage), and shorter notes it records when something worth knowing about happens — a ride failing to sync, a wheel model we don't recognize, a purchase or entitlement change, and similar. These do not carry your route or precise location. Unlike the wheel-diagnostic sample above, there is currently no separate setting to turn these off short of signing out; we keep them only to find and fix problems, and do not use them for advertising.</p>
 
 <h3>Location</h3>
 <p>With your permission, the app uses your device location to record your ride’s route and to power community features such as showing nearby riders (approximate) and territory. Your precise route is stored on your device; it is only shared when you choose to post a ride, and always with the privacy trim described above.</p>
 
 <h3>Bluetooth</h3>
-<p>The app uses Bluetooth solely to connect to your electric unicycle and read its telemetry. Bluetooth is not used to track your location or to identify nearby devices for advertising.</p>
+<p>The app uses Bluetooth solely to connect to your electric unicycle and read its telemetry, and on some wheel models to send commands back to it (see “Wheel control” under Terms of Use). Bluetooth is not used to track your location or to identify nearby devices for advertising.</p>
+
+<h3>Apple Watch / Wear OS</h3>
+<p>If you enable it, opening the app on your phone can ask the system to launch the paired watch app. On iOS this uses Apple's HealthKit only to request that launch — it does not read, write, or store any health or fitness records.</p>
 
 <h3>Push notifications</h3>
-<p>If you enable notifications, your platform’s push service — Apple’s APNs on iOS, Google’s Firebase Cloud Messaging on Android — provides us a push token for your device so we can deliver community notifications (friend requests, messages, group-ride and club activity). The token identifies the device, not you, and carries no ride data. You can disable notifications in your device settings at any time.</p>
+<p>If you enable notifications, your platform’s push service — Apple’s APNs on iOS, Google’s Firebase Cloud Messaging on Android — provides us a push token for your device so we can deliver community notifications (friend requests, messages, group-ride and club activity). The token is tied to your account and carries no ride data. You can disable notifications in your device settings at any time, or mute individual notification types in <code>Settings → Notifications</code>.</p>
+
+<h3>Other optional community features</h3>
+<p>A few more community features are opt-in and worth naming specifically:</p>
+<ul>
+  <li><strong>Nearby riders.</strong> Off by default. If you turn it on, other riders who have also turned it on can see an approximate position for you (snapped to a coarse grid, not your exact spot) for up to 7 days, and you can see them the same way; it is mutual, and turning it off makes you invisible again immediately.</li>
+  <li><strong>Charge spots.</strong> A charger pin you add to the map, with a name and description you write, is visible to every signed-in rider and stays until you or we remove it.</li>
+  <li><strong>Group rides.</strong> A group ride's title, time, meetup point, and your name as host are visible to other riders, and — like leaderboards and public rides — to anyone visiting our website, with no account.</li>
+  <li><strong>Ride Hermes.</strong> If you connect it, finished rides post automatically with the same privacy trim as the Community, until you disconnect it. Your Ride Hermes password, if you sign in that way, is handled by Ride Hermes and never reaches us.</li>
+  <li><strong>Giveaways.</strong> If you enter a giveaway, we store your entry and, if you claim a social-media follow, the handle you give us. Verifying a follow on some networks (for example YouTube) asks that network directly, using a token that network gives us for that one check; we do not store the token.</li>
+</ul>
 
 <h2>3. How we use your information</h2>
 <ul>
@@ -132,7 +150,8 @@
 <p><strong>Email updates.</strong> If you turn on “Email me WheelLife news and updates” — at sign-up or later in <code>Settings → Notifications</code> — we’ll occasionally send product news and updates to the email address on your account. This is off by default and never required to create or use an account. Every email we send this way includes an unsubscribe link, and you can also turn it off any time in <code>Settings → Notifications</code>; either way takes effect immediately. We do not use your email for advertising and do not share it with anyone for their own marketing.</p>
 
 <h2>4. How your information is shared</h2>
-<p><strong>With other riders.</strong> If you use the community, other riders can see the information you choose to make visible — your display name, avatar, shared rides, leaderboard results, club membership, and messages you send them.</p>
+<p><strong>With other riders.</strong> If you use the community, other riders can see the information you choose to make visible — your display name, avatar, shared rides, leaderboard results, club membership, group rides, territory holdings, and messages you send them.</p>
+<p><strong>Publicly, with no account.</strong> Some community information is visible on our website, <a href="https://wheellifeapp.com">wheellifeapp.com</a>, or through the app, to anyone — including a visitor with no Wheel Life account. This includes: your display name, avatar, rider number, and profile fields you've filled in (city, riding style, wheels, bio, links) if someone has your profile link; a ride you post as "Everyone", including its trimmed route and stats; leaderboard totals; and a group ride's title, time, meetup point, and host name. We do this so a shared link or leaderboard works for the person you're sharing it with, whether or not they use the app. It does not include your precise route on a ride you did not post, your messages, or a ride you marked "Friends only".</p>
 <p><strong>With service providers.</strong> We use trusted providers to run the app:</p>
 <ul>
   <li><strong>Supabase</strong> — hosts our backend database, authentication, and storage for community data.</li>
@@ -146,21 +165,22 @@
 
 <h2>5. Your choices and controls</h2>
 <ul>
-  <li>Use the app without an account — all wheel features work offline.</li>
-  <li>Turn leaderboard syncing on or off in <code>Settings → Sharing &amp; Privacy</code>.</li>
+  <li>Connect a wheel, use its live dashboard, and hear its alarms without an account. Recording a ride, keeping History, and the Community need a free account.</li>
+  <li>Turn leaderboard syncing on or off in <code>Settings → Sharing &amp; Privacy</code>. This also controls whether a ride banks territory.</li>
   <li>Turn ride auto-upload on or off, and set the privacy-trim distance.</li>
   <li>Turn off anonymous wheel data in <code>Settings → Data &amp; Diagnostics</code>.</li>
   <li>Turn email news and updates on or off in <code>Settings → Notifications</code> at any time, or use the unsubscribe link in any such email. It is off unless you turn it on.</li>
   <li>Control location and notification permissions in iOS Settings.</li>
   <li>Delete individual rides in the app; deleted rides go to Recently Deleted before being removed.</li>
-  <li>Delete your community account and its data yourself, at any time, in <code>Community → Profile → Delete Account</code>. This permanently removes your profile, shared rides, and group rides; rides stored on your device are unaffected. If you would rather we did it, contact us at <a href="mailto:wheellifeapp@gmail.com">wheellifeapp@gmail.com</a>.</li>
+  <li>Delete your community account and its data yourself, at any time, in <code>Community → Profile → Delete Account</code>. This immediately and permanently deletes your account record and every database row tied to it — profile, shared rides, group rides, messages, territory, diagnostics, and more; rides stored on your device are unaffected. <strong>A known gap:</strong> files those rows pointed to in cloud storage — an avatar image, a shared ride's route file, a ride photo — are not yet deleted by this today; we are fixing that, and until we do, such a file may remain reachable at its address even after the row referencing it is gone. If you would rather we did it, contact us at <a href="mailto:wheellifeapp@gmail.com">wheellifeapp@gmail.com</a>.</li>
 </ul>
 
 <h2>6. Data retention</h2>
-<p>On-device ride data is kept until you delete it or uninstall the app. Community data is kept while your account is active. If you delete your account, we remove your personal community data within a reasonable period, except where we must retain limited information to comply with law or resolve disputes. Anonymous diagnostics, which are not linked to you, may be retained to improve the app.</p>
+<p>On-device ride data is kept until you delete it or uninstall the app. Community data is kept while your account is active. Deleting your account removes the database rows described in Section 5 immediately — we do not hold a grace period for them — except where we must retain limited information to comply with law or resolve disputes; see Section 5 for the one current gap around files those rows pointed to. Wheel-diagnostic samples and diagnostic notes (Section 2) are tied to your account and are deleted along with it. We do not currently run an automatic schedule that deletes these while your account is active — today they are kept indefinitely, for as long as they remain useful for support and bug-fixing.</p>
 
 <h2>7. Data security</h2>
 <p>Community data is transmitted over encrypted connections (HTTPS/TLS) and access is protected by authentication and server-side access rules. No method of transmission or storage is perfectly secure, but we take reasonable measures to protect your information.</p>
+<p>On Android, the operating system's own Auto Backup can include the app's on-device data (including your local ride database) in your Google Account backup, the same as most Android apps; we have not configured an exclusion for it. You can turn this off for the app in your Android device's backup settings.</p>
 
 <h2>8. Children</h2>
 <p>Wheel Life is not directed to children under 13 (or the minimum age required in your country), and we do not knowingly collect personal information from them. If you believe a child has provided us information, contact us and we will delete it.</p>
