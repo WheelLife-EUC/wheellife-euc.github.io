@@ -69,7 +69,7 @@
 <header>
   <h1>Privacy Policy</h1>
   <p class="lead">Wheel Life — telemetry, ride tracking, and community for electric&nbsp;unicycle riders.</p>
-  <p class="meta">Effective date: July 21, 2026 · Last updated: September 27, 2026</p>
+  <p class="meta">Effective date: July 21, 2026 · Last updated: October 13, 2026</p>
 </header>
 
 <div class="callout">
@@ -110,7 +110,8 @@
 </ul>
 
 <h3>Wheel-diagnostic samples (on by default on iOS, off by default on Android; can be changed either way)</h3>
-<p>To improve and correct support for the many wheel models on the market, the app may send a small sample of wheel telemetry — speed, voltage, temperature, and raw Bluetooth packets, along with the wheel model — every few hours per wheel while you are signed in. This sample contains no location. It is tied to your account (so it can be matched back to your wheel if we need to ask you about it), but it is never shown to other riders and does not carry your name or email. You can turn it off at any time in <code>Settings → Data &amp; Diagnostics → Share anonymous wheel data</code>; there is no separate setting for the crash and diagnostic notes below.</p>
+<p>To improve and correct support for the many wheel models on the market, the app may send a small sample of wheel telemetry — speed, voltage, temperature, and raw Bluetooth packets, along with the wheel model — every few hours per wheel while you are signed in. This sample contains no location, with one exception for riders who link a RaceBox (described next). It is tied to your account (so it can be matched back to your wheel if we need to ask you about it), but it is never shown to other riders and does not carry your name or email. You can turn it off at any time in <code>Settings → Data &amp; Diagnostics → Share anonymous wheel data</code>; there is no separate setting for the crash and diagnostic notes below.</p>
+<p><strong>RaceBox capture (Pro, beta).</strong> A RaceBox is an external Bluetooth GPS receiver that Pro riders can link in the app. If <code>Share anonymous wheel data</code> is on and a RaceBox is linked, the app also uploads a raw capture log of what the RaceBox sent during the ride. This log is stored the same way as wheel logs, in the same place, under the same switch and the same retention (Section 6), and unlike the wheel sample above it <strong>does include the ride’s GPS positions, speeds and times</strong>. It is tied to your account, is never shown to other riders, and does not carry your name or email, or the RaceBox’s name, serial number or address. Turning off <code>Share anonymous wheel data</code> stops these uploads. If you do not link a RaceBox, nothing in this paragraph applies.</p>
 
 <h3>Crash and diagnostic notes</h3>
 <p>While you are signed in, the app sends us diagnostic information tied to your account: crash and performance reports (via Apple’s MetricKit, containing stack traces and resource usage), and shorter notes it records when something worth knowing about happens — a ride failing to sync, a wheel model we don't recognize, a purchase or entitlement change, and similar. These do not carry your route or precise location. Unlike the wheel-diagnostic sample above, there is currently no separate setting to turn these off short of signing out; we keep them only to find and fix problems, and do not use them for advertising.</p>
@@ -119,7 +120,7 @@
 <p>With your permission, the app uses your device location to record your ride’s route and to power community features such as showing nearby riders (approximate) and territory. Your precise route is stored on your device; it is only shared when you choose to post a ride, and always with the privacy trim described above.</p>
 
 <h3>Bluetooth</h3>
-<p>The app uses Bluetooth solely to connect to your electric unicycle and read its telemetry, and on some wheel models to send commands back to it (see “Wheel control” under Terms of Use). Bluetooth is not used to track your location or to identify nearby devices for advertising.</p>
+<p>The app uses Bluetooth solely to connect to your electric unicycle (and, if you link one, a RaceBox GPS receiver) and read its telemetry, and on some wheel models to send commands back to it (see “Wheel control” under Terms of Use). Bluetooth is not used to track your location or to identify nearby devices for advertising.</p>
 
 <h3>Apple Watch / Wear OS</h3>
 <p>If you enable it, opening the app on your phone can ask the system to launch the paired watch app. On iOS this uses Apple's HealthKit only to request that launch — it does not read, write, or store any health or fitness records.</p>
@@ -176,7 +177,7 @@
 </ul>
 
 <h2>6. Data retention</h2>
-<p>On-device ride data is kept until you delete it or uninstall the app. Community data is kept while your account is active. Deleting your account removes the database rows described in Section 5 immediately, and the files those rows pointed to shortly after — we do not hold a grace period for either — except where we must retain limited information to comply with law or resolve disputes. Wheel-diagnostic samples and diagnostic notes (Section 2) are tied to your account and are deleted along with it. We do not currently run an automatic schedule that deletes these while your account is active — today they are kept indefinitely, for as long as they remain useful for support and bug-fixing.</p>
+<p>On-device ride data is kept until you delete it or uninstall the app. Community data is kept while your account is active. Deleting your account removes the database rows described in Section 5 immediately, and the files those rows pointed to shortly after — we do not hold a grace period for either — except where we must retain limited information to comply with law or resolve disputes. Wheel-diagnostic samples (including RaceBox capture logs) and diagnostic notes (Section 2) are tied to your account and are deleted along with it. We do not currently run an automatic schedule that deletes these while your account is active — today they are kept indefinitely, for as long as they remain useful for support and bug-fixing.</p>
 
 <h2>7. Data security</h2>
 <p>Community data is transmitted over encrypted connections (HTTPS/TLS) and access is protected by authentication and server-side access rules. No method of transmission or storage is perfectly secure, but we take reasonable measures to protect your information.</p>
