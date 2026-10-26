@@ -73,15 +73,20 @@
 </header>
 
 <div class="callout">
+  <strong>What changed on October 25, 2026</strong>
+  You now choose who sees your rides, and this page says plainly whether your route or only your numbers leave your phone. When you sign in, the app asks once: <strong>routes and stats, everyone</strong>; <strong>routes and stats, friends only</strong>; <strong>stats only</strong>; or <strong>private</strong>. Your answer applies to everything the app uploads on its own, on every phone you use, and you can change it in <code>Settings → Sharing &amp; Privacy</code>. See “Who sees your rides: routes or only stats” in Section 2.
+</div>
+
+<div class="callout">
   <strong>What changed on September 27, 2026</strong>
   A rider showed us this page did not match the app, and we rewrote the affected sections rather than patch around them. In particular: a ride synced only for the leaderboard counts on the leaderboards and for territory but never appears in any feed — never a route, never to a stranger; leaderboard syncing also uploads the coarse map cells (about 900&nbsp;m) a ride passed through, which is a location signal, and a rider not in a club still holds cells under their own name; wheel-diagnostic samples and push tokens are tied to your account, not anonymous; recording a ride and viewing History need an account, the same as the Community; group rides, leaderboards, public rides and public profiles can be seen by anyone on our website, with no account; and deleting your account or a club now removes the files those rows pointed to — an avatar, a route file, a ride photo — from cloud storage as well as the database rows, shortly after deletion, with automatic retries. Deleting a shared or group ride, or replacing one by re-sharing it, cleans up its route file the same way, within about 15 minutes. See each numbered section for the exact wording.
 </div>
 
-<p>This policy explains what information the Wheel Life app (“the app”, “we”, “us”) collects, why, how it is used, and the choices you have. It is written to match how the app actually behaves. Wheel Life is built around a simple principle: your riding data is yours. Your route stays on your device unless you choose to post a ride, and the one thing an account syncs on its own is your leaderboard numbers, your wheel model, and the coarse map cells you rode through, which you can switch off.</p>
+<p>This policy explains what information the Wheel Life app (“the app”, “we”, “us”) collects, why, how it is used, and the choices you have. It is written to match how the app actually behaves. Wheel Life is built around a simple principle: your riding data is yours. Your route stays on your device unless you choose to share it: either by posting a ride yourself, or by answering “routes and stats” when the app asks who sees your rides. With “stats only”, the one thing an account syncs on its own is a ride's numbers, your wheel model, and the coarse map cells you rode through; with “private”, nothing syncs on its own.</p>
 
 <div class="callout">
   <strong>The short version</strong>
-  Your rides are recorded and stored on your phone. Recording a ride and viewing your History need a free account; connecting a wheel, its live dashboard and its alarms do not. If you have an account, leaderboard syncing sends only a ride's numbers, wheel model, and the coarse map cells it passed through — never your precise route — and it never appears in any feed. A ride you post is trimmed to hide where you start and stop, and you choose who sees it: Everyone, Friends only, or Only me. Wheel data is off until you turn it on, and diagnostics are tied to your account, not anonymous. Group rides, leaderboards, and public rides and profiles can be seen on our website by anyone, with no account. We never sell your data.
+  Your rides are recorded and stored on your phone. Recording a ride and viewing your History need a free account; connecting a wheel, its live dashboard and its alarms do not. If you have an account, you choose who sees your rides: routes and stats for everyone, routes and stats for friends only, stats only (a ride's numbers, wheel model and the coarse map cells it passed through, never your route, never in any feed), or private (nothing syncs on its own). A ride you post is trimmed to hide where you start and stop, and you choose who sees it: Everyone, Friends only, or Only me. Wheel data is off until you turn it on, and diagnostics are tied to your account, not anonymous. Group rides, leaderboards, and public rides and profiles can be seen on our website by anyone, with no account. We never sell your data.
 </div>
 
 <h2>1. Who this policy covers</h2>
@@ -104,8 +109,16 @@
 
 <h3>Ride data you choose to share</h3>
 <ul>
+  <li><strong>Who sees your rides: routes or only stats.</strong> The app asks this once, after you sign in, and you can change it at any time in <code>Settings → Sharing &amp; Privacy</code>. Your answer decides what the app uploads on its own after each ride:
+    <ul>
+      <li><strong>Routes and stats, everyone.</strong> Each finished ride is posted with its route, trimmed at both ends, and its numbers. Anyone can see it, in the app and on our website, with no account needed.</li>
+      <li><strong>Routes and stats, friends only.</strong> The same upload, seen only by your accepted friends and you.</li>
+      <li><strong>Stats only.</strong> Only the ride's numbers, your wheel model, and the coarse map cells it passed through are synced, for leaderboards and territory. Your route is not uploaded and the ride never appears in any feed.</li>
+      <li><strong>Private.</strong> Nothing is uploaded on its own. Your rides count on no leaderboard or territory and cannot be restored from your account.</li>
+    </ul>
+    We keep your answer on our servers with your account so every phone you use follows it, and our servers store an automatic upload no more widely than your answer allows, even one sent by an older version of the app. A ride you post yourself always asks who can see it, whatever you answered here. A change applies to rides from then on; a ride you already posted keeps its setting until you change it on that ride.</li>
   <li><strong>Leaderboard statistics.</strong> If leaderboard syncing is enabled, the numeric results of a ride — distance, top speed, airtime, duration — are synced automatically, along with your wheel model and the coarse map cells (about 900&nbsp;m across) it passed through for Territory (see below). Your precise route is <em>not</em> included. A leaderboard-only ride never appears in any feed, yours or anyone else's; it counts on the leaderboards and for territory, and you can see it in your own ride list.</li>
-  <li><strong>Shared rides.</strong> When you post a ride (manually or via auto-upload), its route is included but is trimmed at both the start and end to hide where you began and finished. Rides too short to trim safely are shared as statistics only, with no route at all. A ride you post as "Everyone" is public: it can be seen, including its trimmed route, by any rider and by anyone visiting our website with the link, with no account needed. A ride you post as "Friends only" is visible to your accepted friends and to you. A ride you post as "Only me" is visible to you alone: it is in no one else's feed, profile, or ride page. Whichever you choose, the ride still counts on the leaderboards and for territory.</li>
+  <li><strong>Shared rides.</strong> When a ride is posted (by you, or automatically when you answered “routes and stats”), its route is included but is trimmed at both the start and end to hide where you began and finished. Rides too short to trim safely are shared as statistics only, with no route at all. A ride you post as "Everyone" is public: it can be seen, including its trimmed route, by any rider and by anyone visiting our website with the link, with no account needed. A ride you post as "Friends only" is visible to your accepted friends and to you. A ride you post as "Only me" is visible to you alone: it is in no one else's feed, profile, or ride page. Whichever you choose, the ride still counts on the leaderboards and for territory.</li>
   <li><strong>Territory.</strong> Riding through a map cell (about 900&nbsp;m across) banks distance toward it, whether or not leaderboard syncing produces anything else. Only the cell identifier and distance travel — never your actual path. If your club holds the most distance in a cell over time, the cell shows as your club's; if you are not in a club, a cell you hold shows under your own display name instead. Territory is visible to every signed-in rider, not only your club or friends.</li>
 </ul>
 
@@ -170,7 +183,7 @@
 <h2>5. Your choices and controls</h2>
 <ul>
   <li>Connect a wheel, use its live dashboard, and hear its alarms without an account. Recording a ride, keeping History, and the Community need a free account.</li>
-  <li>Turn leaderboard syncing on or off in <code>Settings → Sharing &amp; Privacy</code>. This also controls whether a ride banks territory.</li>
+  <li>Choose who sees your rides in <code>Settings → Sharing &amp; Privacy</code>: routes and stats for everyone, routes and stats for friends only, stats only, or private. This also controls whether a ride counts on leaderboards and banks territory (private: neither).</li>
   <li>Turn ride auto-upload on or off, and set the privacy-trim distance.</li>
   <li>Turn wheel-data sharing on or off in <code>Settings → Data &amp; Diagnostics</code>; it is off until you turn it on.</li>
   <li>Turn email news and updates on or off in <code>Settings → Notifications</code> at any time, or use the unsubscribe link in any such email. It is off unless you turn it on.</li>
