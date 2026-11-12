@@ -69,7 +69,7 @@
 <header>
   <h1>Privacy Policy</h1>
   <p class="lead">Wheel Life — telemetry, ride tracking, and community for electric&nbsp;unicycle riders.</p>
-  <p class="meta">Effective date: July 21, 2026 · Last updated: October 13, 2026</p>
+  <p class="meta">Effective date: July 21, 2026 · Last updated: November 11, 2026</p>
 </header>
 
 <div class="callout">
@@ -119,6 +119,16 @@
 <h3>Location</h3>
 <p>With your permission, the app uses your device location to record your ride’s route and to power community features such as showing nearby riders (approximate) and territory. Your precise route is stored on your device; it is only shared when you choose to post a ride, and always with the privacy trim described above.</p>
 
+<h3>Fair-play checks</h3>
+<p>Leaderboards, territory, badges and XP only mean something if the rides behind them were really ridden, so the app and our servers check rides for signs of tampering. When you share a ride to the Community, or when the app decides a ride cannot count, the following is sent to us and tied to your account:</p>
+<ul>
+  <li><strong>Simulated-location counts.</strong> How many of the ride’s location fixes your phone’s operating system marked as simulated (for example by a mock-location app or a developer tool), and how many came from an external GPS receiver. On Android the app may also note that a mock-location app is selected in Developer options.</li>
+  <li><strong>A ride summary from the wheel and the phone.</strong> Statistics, not a recording: how closely the wheel’s speed and the GPS speed agreed, motor load, how much the wheel tilted and the phone moved, GPS accuracy, and the wheel’s odometer and battery level at the start and end of the ride. This summary does not contain your route or any coordinates.</li>
+  <li><strong>Scrambled identifiers.</strong> A one-way hash of your wheel’s Bluetooth name, and of an identifier the app creates when it is installed. We use them to tell one wheel and one phone from another; accounts are limited to one per phone.</li>
+  <li><strong>Check results.</strong> What our checks found for a ride or an account, for example that location was simulated, that GPS moved faster than the wheel, that a route jumped an impossible distance, or that claimed territory was not on the route.</li>
+</ul>
+<p>We use this only to decide whether a ride counts, to review rides and accounts that appear to break the fair-play rules in our <a href="terms.html">Terms of Use</a>, and to act on what we find, for example by holding a ride so it does not count or by suspending an account. Some of these checks act automatically. If you think a ride or an account was held by mistake, email us at <a href="mailto:wheellifeapp@gmail.com">wheellifeapp@gmail.com</a> and a person will look at it. There is no setting to turn these checks off for rides you share, and we do not use this information for advertising.</p>
+
 <h3>Bluetooth</h3>
 <p>The app uses Bluetooth solely to connect to your electric unicycle (and, if you link one, a RaceBox GPS receiver) and read its telemetry, and on some wheel models to send commands back to it (see “Wheel control” under Terms of Use). Bluetooth is not used to track your location or to identify nearby devices for advertising.</p>
 
@@ -145,7 +155,7 @@
   <li>To deliver notifications you’ve opted into.</li>
   <li>To send occasional product news and updates by email, only if you have turned that on.</li>
   <li>To improve wheel support and fix bugs, using diagnostics that are linked to your account.</li>
-  <li>To keep the service secure and prevent abuse.</li>
+  <li>To keep the service secure and prevent abuse, including checking rides for tampering so that leaderboards, territory and rewards stay fair.</li>
 </ul>
 <p>We do not use your data for advertising, and we do not build advertising profiles.</p>
 <p><strong>Email updates.</strong> If you turn on “Email me WheelLife news and updates” — at sign-up or later in <code>Settings → Notifications</code> — we’ll occasionally send product news and updates to the email address on your account. This is off by default and never required to create or use an account. Every email we send this way includes an unsubscribe link, and you can also turn it off any time in <code>Settings → Notifications</code>; either way takes effect immediately. We do not use your email for advertising and do not share it with anyone for their own marketing.</p>
@@ -177,7 +187,7 @@
 </ul>
 
 <h2>6. Data retention</h2>
-<p>On-device ride data is kept until you delete it or uninstall the app. Community data is kept while your account is active. Deleting your account removes the database rows described in Section 5 immediately, and the files those rows pointed to shortly after — we do not hold a grace period for either — except where we must retain limited information to comply with law or resolve disputes. Wheel-diagnostic samples (including RaceBox capture logs) and diagnostic notes (Section 2) are tied to your account and are deleted along with it. We do not currently run an automatic schedule that deletes these while your account is active — today they are kept indefinitely, for as long as they remain useful for support and bug-fixing.</p>
+<p>On-device ride data is kept until you delete it or uninstall the app. Community data is kept while your account is active. Deleting your account removes the database rows described in Section 5 immediately, and the files those rows pointed to shortly after — we do not hold a grace period for either — except where we must retain limited information to comply with law or resolve disputes. Wheel-diagnostic samples (including RaceBox capture logs) and diagnostic notes (Section 2) are tied to your account and are deleted along with it. We do not currently run an automatic schedule that deletes these while your account is active — today they are kept indefinitely, for as long as they remain useful for support and bug-fixing. Fair-play records attached to a ride (Section 2) are deleted when that ride or your account is deleted. We may keep a minimal record that a ride, an account or a phone was held for breaking the fair-play rules, so that the same abuse cannot simply start again.</p>
 
 <h2>7. Data security</h2>
 <p>Community data is transmitted over encrypted connections (HTTPS/TLS) and access is protected by authentication and server-side access rules. No method of transmission or storage is perfectly secure, but we take reasonable measures to protect your information.</p>
